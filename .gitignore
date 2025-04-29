@@ -1,10 +1,25 @@
-# Ignore node_modules folder in both client and server
+# Ignore node_modules folders
 client/node_modules/
 server/node_modules/
 
-# Ignore .env files in the server
+# Ignore build and dist folders (React/Vite build outputs)
+client/build/
+client/dist/
+
+# Ignore env files in root, client, and server
+.env
+.env.local
+.env.development
+.env.production
+client/.env
 server/.env
 
-# Ignore other common files
-.DS_Store
+# Ignore log files
 *.log
+npm-debug.log*
+
+# Ignore system-specific or editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -14,7 +14,11 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 // Middlewares
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:3000", "https://phone-manager-harshit.onrender.com"],
+  credentials: true
+}));
+
 
 // Serve uploads folder statically for image access
 app.use('/uploads', express.static('uploads'));
@@ -29,5 +33,5 @@ app.use('/api/auth', authRoutes);
 
 // Server Start
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on ${PORT}`);
 });
