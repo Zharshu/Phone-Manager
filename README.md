@@ -42,14 +42,16 @@ A full-stack MERN application that allows users to securely manage their persona
 ---
 
 ## 📂 Project Structure
-phone-manager-app/
+
+```
+ phone-manager-app/ 
 ├── client/ # React frontend 
 ├── server/ # Express backend 
-├── screenshots/ # Screenshots used in README
-├── .gitignore 
+├── images/ # Screenshots used in README 
+├── .gitignore
 ├── README.md
 
-
+```
 ---
 
 ## ⚙️ Getting Started Locally
