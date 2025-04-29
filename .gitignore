@@ -1,1 +1,10 @@
-node_modules
+# Ignore node_modules folder in both client and server
+client/node_modules/
+server/node_modules/
+
+# Ignore .env files in the server
+server/.env
+
+# Ignore other common files
+.DS_Store
+*.log
