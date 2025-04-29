@@ -1,0 +1,339 @@
+
+:root {
+  --primary-purple: #8250fc;
+  --primary-purple-hover: #6c40e0;
+  --primary-gradient: linear-gradient(90deg, #8250fc 0%, #4fb0ff 100%);
+  --bg-color-light: #eef1ff;
+  --text-color-light: #333333;
+  --card-bg-light: #ffffff;
+  --input-bg-light: #ffffff;
+  --input-border-light: #e1e5ef;
+}
+
+/* Base Container */
+.contacts-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Header (Title + Logout Button) */
+.contacts-header {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem; /* Increased gap between logout and theme buttons */
+}
+
+/* Title */
+.contacts-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-purple);
+  margin: 0;
+}
+
+/* Logout Button */
+.logout-button {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.3);
+}
+
+/* Search Bar */
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.9rem 1.2rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--input-border-light);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--input-bg-light);
+  color: inherit;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.search-input::placeholder {
+  color: #a0aec0;
+}
+
+.search-input:focus {
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(130, 80, 252, 0.15);
+}
+
+/* Contact Form Box */
+.contact-form-container {
+  width: 100%;
+  max-width: 600px;
+  background: var(--card-bg-light);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 1.5rem;
+}
+
+/* Form title */
+.form-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Form inputs group */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Form labels */
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Form inputs */
+.form-input {
+  width: 95%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--input-border-light);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-purple);
+  box-shadow: 0 0 0 3px rgba(130, 80, 252, 0.15);
+}
+
+/* Add Contact Button */
+.add-contact-button {
+  width: 100%;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.add-contact-button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(79, 70, 229, 0.3);
+}
+
+/* Plus icon */
+.plus-icon {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Contact List */
+.contacts-list {
+  width: 100%;
+  max-width: 600px;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* Contact Item */
+.contact-item {
+  background: var(--card-bg-light);
+  border-radius: 0.8rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Contact Item */
+.contact-item-responsive {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.contact-photo-container {
+  flex: 0 0 auto;
+}
+
+.contact-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.contact-info-container {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.contact-actions-container {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .contact-item-responsive {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-photo-container {
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-actions-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+.contact-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+  color: #2d3748;
+}
+
+.contact-email, .contact-phone {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+/* Empty state container */
+.empty-state {
+  width: 100%;
+  max-width: 600px;
+  background: transparent;
+  border: 1px dashed #cbd5e0;
+  border-radius: 1rem;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Empty state icon */
+.empty-icon {
+  width: 50px;
+  height: 50px;
+  color: #a0aec0;
+  margin-bottom: 1rem;
+}
+
+/* Empty state text */
+.empty-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+}
+
+.empty-description {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 0;
+}
+
+/* Dark mode adjustments */
+.dark .contacts-container {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+.dark .contact-form-container {
+  background-color: #1f2937;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark .search-input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.dark .search-input::placeholder {
+  color: #9ca3af;
+}
+
+.dark .form-input {
+  background-color: #374151;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.dark .form-label {
+  color: #d1d5db;
+}
+
+.dark .empty-state {
+  border-color: #4b5563;
+}
+
+.dark .empty-icon {
+  color: #6b7280;
+}
+
+.dark .empty-title {
+  color: #d1d5db;
+}
+
+.dark .empty-description {
+  color: #9ca3af;
+}
+
+.dark .contact-phone,
+.dark .contact-email,
+.dark .contact-name {
+  color: #ffffff;
+}
+
+.dark .contact-item {
+  background-color: #1f2937;
+}
