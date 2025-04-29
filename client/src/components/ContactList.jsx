@@ -22,7 +22,7 @@ function ContactList({ contacts, handleEdit, handleDelete }) {
         <li key={contact._id || contact.id} className="contact-item contact-item-responsive">
           <div className="contact-photo-container">
             <img
-              src={contact.photoUrl.startsWith('/uploads') ? `http://localhost:5000${contact.photoUrl}` : contact.photoUrl}
+             src={contact.photoUrl.startsWith('/uploads') ? `http://localhost:5000${contact.photoUrl}`: contact.photoUrl}
               alt={`${contact.name}'s avatar`}
               className="contact-photo"
             />
